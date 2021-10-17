@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>A Basic HTML5 Template</title>
+    <meta name="description" content="A simple HTML5 Template for new projects.">
+</head>
+
+<body>
+<ul>
+    {% for product in products %}
+        <span>{{ product }}</span>
+        {% if loop.index == 3 %}
+            <br>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{{ dump(products) }}
+</body>
+</html>
